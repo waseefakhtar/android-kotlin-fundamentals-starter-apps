@@ -56,7 +56,7 @@ class OverviewViewModel : ViewModel() {
                     }
 
                     override fun onResponse(call: Call<List<MarsProperty>>, response: Response<List<MarsProperty>>) {
-                        "Success: ${response.body()?.size} Mars properties retrieved"
+                        _response.value = "Success: ${response.body()?.size} Mars properties retrieved"
                     }
 
                 })
